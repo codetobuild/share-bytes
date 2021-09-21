@@ -6,7 +6,7 @@ const notesRoute = require("./routes/notes");
 const homeRoute = require("./routes/home");
 
 app.use(express.json());
-app.use(express.urlencoded());
+app.use(express.urlencoded({extended: true}));
 app.use(express.static("public"));
 app.use(express.static("public/uploads"));
 
